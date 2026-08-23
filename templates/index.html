@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erick Njeru | Portfolio</title>
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <h2 class="logo">Erick Njeru</h2>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="hero-greeting">Hello, I'm</p>
+            <h1>Erick Njeru</h1>
+            <p class="hero-subtitle">
+                Python Developer • AI Enthusiast • Future Software Engineer
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View My Projects</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p class="about-text">
+            I am a student passionate about Python, Artificial Intelligence,
+            and software development. I build projects to improve my skills
+            and create useful tools that solve real problems.
+        </p>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+        <h2>My Skills</h2>
+
+        <div class="skills-container">
+            <div class="skill">
+                <div class="skill-icon">
+                    <i class="fab fa-python"></i>
+                </div>
+                <h3>Python</h3>
+                <p>Programming fundamentals, automation, and building real projects.</p>
+            </div>
+
+            <div class="skill">
+                <div class="skill-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3>Artificial Intelligence</h3>
+                <p>Prompt engineering, AI tools, and exploring machine learning concepts.</p>
+            </div>
+
+            <div class="skill">
+                <div class="skill-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Web Development</h3>
+                <p>Building modern websites using HTML, CSS, and Flask.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <h2>My Projects</h2>
+
+        <div class="projects-container">
+            <div class="project">
+                <h3>Personal Portfolio</h3>
+                <p>
+                    A clean personal portfolio website built with Python, Flask, HTML and CSS.
+                </p>
+                <span class="project-tag">Flask</span>
+                <span class="project-tag">HTML/CSS</span>
+            </div>
+
+            <div class="project">
+                <h3>Python Projects</h3>
+                <p>
+                    Small Python projects created while learning programming fundamentals and problem solving.
+                </p>
+                <span class="project-tag">Python</span>
+            </div>
+        </div>
+    </section>
+
+   <!-- Contact -->
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p class="contact-text">
+        Interested in working together or just want to connect?  
+        Feel free to reach out through any of the channels below.
+    </p>
+
+    <div class="contact-info">
+        <!-- Email -->
+        <a href="mailto:ericknjeru708@gmail.com" class="contact-item">
+            <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+            </div>
+            <div>
+                <h4>Email</h4>
+                <p>ericknjeru708@gmail.com</p>
+            </div>
+        </a>
+
+        <!-- Phone -->
+        <a href="tel:+254768934132" class="contact-item">
+            <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+            </div>
+            <div>
+                <h4>Phone</h4>
+                <p>+254 768934132</p>
+            </div>
+        </a>
+
+        <!-- Instagram -->
+        <a href="https://instagram.com/ma.charia_eric" target="_blank" class="contact-item">
+            <div class="contact-icon">
+                <i class="fab fa-instagram"></i>
+            </div>
+            <div>
+                <h4>Instagram</h4>
+                <p>@ma.charia_eric</p>
+            </div>
+        </a>
+
+        <!-- Twitter / X -->
+        <a href="https://twitter.com/your_twitter" target="_blank" class="contact-item">
+            <div class="contact-icon">
+                <i class="fab fa-x-twitter"></i>
+            </div>
+            <div>
+                <h4>Twitter / X</h4>
+                <p>@callme_Mash</p>
+            </div>
+        </a>
+    </div>
+</section>
+
+
+   </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Erick Njeru. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when a link is clicked
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
